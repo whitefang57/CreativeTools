@@ -1,4 +1,4 @@
-package com.whitefang.creativeTools.utility;
+package com.whitefang.creativetools.utility;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

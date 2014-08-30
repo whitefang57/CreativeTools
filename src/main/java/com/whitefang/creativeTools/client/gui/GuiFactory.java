@@ -1,4 +1,4 @@
-package com.whitefang.creativeTools.client.gui;
+package com.whitefang.creativetools.client.gui;
 
 import cpw.mods.fml.client.IModGuiFactory;
 import net.minecraft.client.Minecraft;

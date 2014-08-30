@@ -1,7 +1,7 @@
-package com.whitefang.creativeTools.client.gui;
+package com.whitefang.creativetools.client.gui;
 
-import com.whitefang.creativeTools.handler.ConfigurationHandler;
-import com.whitefang.creativeTools.reference.Reference;
+import com.whitefang.creativetools.handler.ConfigurationHandler;
+import com.whitefang.creativetools.reference.Reference;
 import cpw.mods.fml.client.config.GuiConfig;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;

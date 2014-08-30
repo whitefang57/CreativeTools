@@ -1,4 +1,4 @@
-package com.whitefang.creativeTools.proxy;
+package com.whitefang.creativetools.proxy;
 
 public interface IProxy {
 }

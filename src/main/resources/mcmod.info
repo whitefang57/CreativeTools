@@ -1,0 +1,21 @@
+[
+{
+  "modid": "CreativeTools",
+  "name": "Creative Tools",
+  "description": "Useful /"creative/" tools for use in survival",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "pahimar"
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

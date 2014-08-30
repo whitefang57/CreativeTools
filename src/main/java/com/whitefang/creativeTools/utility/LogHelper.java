@@ -1,6 +1,6 @@
-package com.whitefang.creativeTools.utility;
+package com.whitefang.creativetools.utility;
 
-import com.whitefang.creativeTools.reference.Reference;
+import com.whitefang.creativetools.reference.Reference;
 import cpw.mods.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
 
