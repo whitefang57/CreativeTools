@@ -22,9 +22,9 @@ public class ConfigurationHandler {
 	}
 
 	private static void loadConfiguration() {
-		xRange = configuration.getInt("xRange", Configuration.CATEGORY_GENERAL, 1, 0, 9, "");
-		yRange = configuration.getInt("yRange", Configuration.CATEGORY_GENERAL, 1, 0, 9, "");
-		zRange = configuration.getInt("zRange", Configuration.CATEGORY_GENERAL, 1, 0, 9, "");
+		xRange = configuration.getInt("xRange", Configuration.CATEGORY_GENERAL, 1, 0, 4, "");
+		yRange = configuration.getInt("yRange", Configuration.CATEGORY_GENERAL, 1, 0, 4, "");
+		zRange = configuration.getInt("zRange", Configuration.CATEGORY_GENERAL, 1, 0, 4, "");
 
 		if (configuration.hasChanged()) {
 			configuration.save();

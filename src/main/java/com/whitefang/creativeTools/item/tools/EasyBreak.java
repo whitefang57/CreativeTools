@@ -36,28 +36,51 @@ public class EasyBreak extends ItemCreativeTool {
 			MovingObjectPosition mop = raytraceFromEntity(world, player, false, 4.5D);
 			if (mop == null)
 				return equipped;
-			if (!player.isSneaking())
-				return equipped;
 
-			switch (mop.sideHit) {
-				case 0:
-					changeRange(ForgeDirection.DOWN);
-					break;
-				case 1:
-					changeRange(ForgeDirection.UP);
-					break;
-				case 2:
-					changeRange(ForgeDirection.WEST);
-					break;
-				case 3:
-					changeRange(ForgeDirection.EAST);
-					break;
-				case 4:
-					changeRange(ForgeDirection.SOUTH);
-					break;
-				case 5:
-					changeRange(ForgeDirection.NORTH);
-					break;
+			if (!player.isSneaking()) {
+				switch (mop.sideHit) {
+					case 0:
+						changeRange(ForgeDirection.UP);
+						break;
+					case 1:
+						changeRange(ForgeDirection.UP);
+						break;
+					case 2:
+						changeRange(ForgeDirection.WEST);
+						break;
+					case 3:
+						changeRange(ForgeDirection.WEST);
+						break;
+					case 4:
+						changeRange(ForgeDirection.NORTH);
+						break;
+					case 5:
+						changeRange(ForgeDirection.NORTH);
+						break;
+				}
+			}
+
+			if (player.isSneaking()) {
+				switch (mop.sideHit) {
+					case 0:
+						changeRange(ForgeDirection.DOWN);
+						break;
+					case 1:
+						changeRange(ForgeDirection.DOWN);
+						break;
+					case 2:
+						changeRange(ForgeDirection.EAST);
+						break;
+					case 3:
+						changeRange(ForgeDirection.EAST);
+						break;
+					case 4:
+						changeRange(ForgeDirection.SOUTH);
+						break;
+					case 5:
+						changeRange(ForgeDirection.SOUTH);
+						break;
+				}
 			}
 			player.addChatMessage(new ChatComponentText("xRange:" + xRange));
 			player.addChatMessage(new ChatComponentText("yRange:" + yRange));
@@ -68,7 +91,8 @@ public class EasyBreak extends ItemCreativeTool {
 
 	@Override
 	public void addInformation(ItemStack itemstack, EntityPlayer entityplayer, List list, boolean flag) {
-		list.add("Shift-Click on a block to change range");
+		list.add("Right-Click on a block to increase range");
+		list.add("Shift + Right-Click on a block to decrease range");
 		list.add("xRange:" + xRange);
 		list.add("yRange:" + yRange);
 		list.add("zRange:" + zRange);
@@ -151,7 +175,7 @@ public class EasyBreak extends ItemCreativeTool {
 					xRange--;
 				break;
 			case WEST:
-				if (xRange < 9)
+				if (xRange < 4)
 					xRange++;
 				break;
 
@@ -160,7 +184,7 @@ public class EasyBreak extends ItemCreativeTool {
 					zRange--;
 				break;
 			case NORTH:
-				if (zRange < 9)
+				if (zRange < 4)
 					zRange++;
 				break;
 
@@ -169,7 +193,7 @@ public class EasyBreak extends ItemCreativeTool {
 					yRange--;
 				break;
 			case UP:
-				if (yRange < 9)
+				if (yRange < 4)
 					yRange++;
 				break;
 
