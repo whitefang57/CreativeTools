@@ -9,7 +9,9 @@ import java.io.File;
 
 public class ConfigurationHandler {
 	public static Configuration configuration;
-	public static boolean testValue = false;
+	public static int xRange = 1;
+	public static int yRange = 1;
+	public static int zRange = 1;
 
 	public static void init(File configFile) {
 		// Create the configuration object from the given configuration file
@@ -20,6 +22,9 @@ public class ConfigurationHandler {
 	}
 
 	private static void loadConfiguration() {
+		xRange = configuration.getInt("xRange", Configuration.CATEGORY_GENERAL, 1, 0, 9, "");
+		yRange = configuration.getInt("yRange", Configuration.CATEGORY_GENERAL, 1, 0, 9, "");
+		zRange = configuration.getInt("zRange", Configuration.CATEGORY_GENERAL, 1, 0, 9, "");
 
 		if (configuration.hasChanged()) {
 			configuration.save();

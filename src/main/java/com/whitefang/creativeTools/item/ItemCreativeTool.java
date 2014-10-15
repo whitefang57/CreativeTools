@@ -1,15 +1,20 @@
-package com.whitefang.creativeTools.item;
+package com.whitefang.creativetools.item;
 
-import com.whitefang.creativeTools.reference.Reference;
+import com.whitefang.creativetools.CreativeTools;
+import com.whitefang.creativetools.creativetab.CreativeTabCreativeTools;
+import com.whitefang.creativetools.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemTool;
 
-public class ItemCreativeTools extends Item {
-	public ItemCreativeTools() {
-		super();
+import java.util.Set;
+
+public class ItemCreativeTool extends ItemTool {
+	public ItemCreativeTool(Set effectiveBlocks) {
+		super(0.0F, CreativeTools.CREATIVE_MATERIAL, effectiveBlocks);
+		this.setCreativeTab(CreativeTabCreativeTools.CT_TAB);
 	}
 
 	@Override
